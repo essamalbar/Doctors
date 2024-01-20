@@ -2,6 +2,8 @@ import 'package:doctors/core/helpers/spacing.dart';
 import 'package:doctors/core/theming/styles.dart';
 import 'package:doctors/core/widgets/app_text_button.dart';
 import 'package:doctors/core/widgets/app_text_form_field.dart';
+import 'package:doctors/core/widgets/date_time_picker.dart';
+import 'package:doctors/core/widgets/file_picker.dart';
 import 'package:doctors/features/login/ui/widgets/already_have_account_text.dart';
 import 'package:flutter/material.dart';
 
@@ -73,6 +75,21 @@ class _LoginScreenState extends State<LoginScreen> {
                             buttonStyle: TextStyles.font16WhiteSemiBold),
                         verticalSpace(24),
                         const AlreadyHaveAccountText(),
+                        verticalSpace(10),
+                        const DateTimePickerWidget(),
+                        verticalSpace(10),
+                        ElevatedButton(
+                          onPressed: () {
+                            // Navigate to the file picker screen
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const FilePickerExample()),
+                            );
+                          },
+                          child: const Text('File Picker'),
+                        ),
                       ],
                     ),
                   ),

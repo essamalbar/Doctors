@@ -39,6 +39,7 @@ dependencies:
   freezed_annotation: ^2.4.1
   get_it: ^7.6.6
   json_annotation: ^4.8.1
+  json_serializable: ^6.7.1
   # networking
   dio: ^5.4.0
   retrofit: ^4.0.3
@@ -50,8 +51,10 @@ dependencies:
   flutter_native_splash: ^2.3.9
   flutter_svg: ^2.0.9
   flutter_screenutil: ^5.9.0
-  build_runner: ^2.4.7
+  build_runner: ^2.4.8
+  path: ^1.8.0
   cupertino_icons: ^1.0.2
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:
@@ -105,6 +108,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-scripts:
-    postupdate:
-      - flutter pub run build_runner build
